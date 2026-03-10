@@ -1,61 +1,53 @@
 #include <stdlib.h>
 #include <stdio.h>
-typedef struct tree{
-    char data ;
-    struct tree* left;
-    struct tree * right ;
+
+typedef struct tree {
+    char data;
+    struct node* left ;
+    struct nood*right ;
 }*Tree;
 
-Tree createNode(char data)
-{
-    Tree newNode = (Tree)malloc(sizeof(Tree));
-    newNode -> data = data ;       // PREORDER (ROOT LEFT RIGHT )   //
-    newNode -> left =NULL;        // INORDER (LEFT , ROOT, RIGHT)  //     
-    newNode ->right = NULL;      //  POSTORDER(LEFT ,RIGHT,ROOT ) //
+Tree createNode(char data ){
+    Tree newNode = (Tree)malloc(sizeof(struct tree));
+    newNode -> data =  data;
+    newNode -> left  = NULL;
+    newNode ->right  = NULL;
+
     return newNode;
-}
-void preorder(Tree pre){
-    if (pre == NULL){
-        return;
-    }
-    printf("%c",pre->data);
-    preorder(pre->left);
-    preorder(pre->right);
-    
+}   
+
+void traverse (Tree root ){
+    if (root == NULL )
+    return;
+    printf (" %d -> ", root -> data);
+    traverse(root->left);
+    traverse(root->right );
+
 
 }
 
 int main() {
-    
-    Tree root = createNode('R');    
-    Tree nodeA = createNode('A');    
-    Tree nodeB= createNode('B');    
-    Tree nodeC = createNode('C');    
-    Tree nodeD = createNode('D');    
-    Tree nodeE = createNode('E');    
-    Tree nodeF = createNode('F');    
-    Tree nodeG = createNode('G');    
+    Tree root  = createNode('R');
+    Tree nodeA = createNode('A');
+    Tree nodeB = createNode('B');
+    Tree nodeC = createNode('C');
+    Tree nodeD = createNode('D');
+    Tree nodeE = createNode('E');
+    Tree nodeF = createNode('F');
+    Tree nodeG = createNode('G');
 
-    root->left = nodeA;
-    root->right = nodeB;
+    root -> left = nodeA;
+    root -> right  = nodeB;
 
-    nodeA->left = nodeC;
-    nodeA->right = nodeD;
+    nodeA -> left = nodeC;
+    nodeA ->right  =nodeD;
 
     nodeB->left = nodeE;
-    nodeB->right = nodeF;
+    nodeB -> right = nodeF;
 
-    nodeF->left = nodeG;
+    nodeF -> left = nodeG;
 
-    
-    
-    
-    
-    
-    
-    preorder(root);
-
-
+    traverse(root);
 
     return 0;
 }
