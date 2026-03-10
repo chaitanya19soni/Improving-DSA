@@ -1,6 +1,8 @@
-    free(node1);
-    free(node2);
-    free(node3);
-    free(node4);
-    free(node5);
-   
+ i =0;
+
+    while (startNode != pr && i !=0)
+    {
+
+        printf("%d ->", pr->data);
+        pr = pr->next;
+        i=1;
