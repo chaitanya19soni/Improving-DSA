@@ -3,8 +3,8 @@
 
 typedef struct tree {
     char data;
-    struct node* left ;
-    struct nood*right ;
+    struct tree* left ;
+    struct tree*right ;
 }*Tree;
 
 Tree createNode(char data ){
@@ -17,11 +17,13 @@ Tree createNode(char data ){
 }   
 
 void traverse (Tree root ){
-    if (root == NULL )
-    return;
+    if (root == NULL ){
+        return;
+    }
+    
     printf (" %d -> ", root -> data);
-    traverse(root->left);
-    traverse(root->right );
+    traverse (root->left);
+    traverse (root->right );
 
 
 }
