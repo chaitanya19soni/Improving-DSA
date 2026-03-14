@@ -17,7 +17,7 @@ void printNode(Node pr)
 {
     while (pr){
         printf("%d->",pr->data);
-        pr = pr->next;
+        pr = pr->next;  
     }
     printf("null\n");
 }
