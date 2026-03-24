@@ -20,8 +20,8 @@ void traverse( Tree root ){
     {
         return ;
     }
-    printf("%d->", root ->data);
     traverse(root->left );
+    printf("%d->", root ->data);
     traverse(root->right);
 
 }

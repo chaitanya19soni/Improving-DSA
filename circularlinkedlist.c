@@ -26,7 +26,6 @@
         printf("null\n");
     }
 
-
 int main() {
     Node node1 = createNode(53);    
     Node node2 = createNode(54);    

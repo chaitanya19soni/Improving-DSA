@@ -17,7 +17,7 @@ Node createNode (int data){
 void forward (Node pr) {
     printf("Forward  :");
     while (pr){
-    printf("%dd->",pr->data);
+    printf("%d->",pr->data);
     pr= pr ->next ;
 }
 printf("null\n");
