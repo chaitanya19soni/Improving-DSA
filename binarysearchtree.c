@@ -22,7 +22,7 @@ void traversal (Node pr){
     printf("%d,", pr->data);
     traversal(pr->left);
     traversal(pr->right);
-} 
+}
 
 
 int main() {
