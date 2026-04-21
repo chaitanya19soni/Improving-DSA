@@ -101,7 +101,7 @@ node1 = insertion(node1,nodeI,1);
 printNode(node1);
 
 node1 = deletion(node1,nodeI);
-
+        
 printNode(node1);
 
 
