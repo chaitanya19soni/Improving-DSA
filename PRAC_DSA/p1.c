@@ -11,7 +11,7 @@ int main() {
     for (int i =0 ; i<n ; i++){
         scanf("%d",&arr[i]);
     }
-
+    printf("type the key you wnat to find");
     scanf("%d",&key);
     
     for (int i =0 ; i<n ;i++){
