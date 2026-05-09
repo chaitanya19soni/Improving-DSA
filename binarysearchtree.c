@@ -24,7 +24,7 @@ void traversal (Node pr){
     traversal(pr->right);
 }
 
-
+ 
 int main() {
     Node root =  createNode(1);
     root ->left =createNode(2);

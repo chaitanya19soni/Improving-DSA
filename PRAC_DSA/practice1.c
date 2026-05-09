@@ -41,10 +41,5 @@ node5 ->next =  NULL;
 
 printNode(node1);                       // calling the printNode function to print the values assigned 
 
-
-
-
-    
-
     return 0;
 }
