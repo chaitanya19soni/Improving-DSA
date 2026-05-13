@@ -19,6 +19,7 @@ void forward (Node pr) {
     while (pr){
     printf("%d->",pr->data);
     pr= pr ->next ;
+    pr = pr->prev;
 }
 printf("null\n");
 }
@@ -51,7 +52,7 @@ int main() {
     node1->prev = NULL;
 
     forward(node1);
-    backward(node4);
+    forward(node4);
     
     return 0;
 }
