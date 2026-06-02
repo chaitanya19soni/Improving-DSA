@@ -1,32 +1,35 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
-typedef struct node{
-    int data ;
-    struct node *next ;
+typedef struct node
+{
+    int data;
+    struct node *next;
     struct node *prev;
-}*Node;
+} *Node;
 
-Node createNode (int data ){
-    Node newNode =  (Node)malloc(sizeof(struct node));
-    newNode ->data = data ;
-    newNode ->next = NULL;
-    newNode ->prev = NULL;
+Node createNode(int data)
+{
+    Node newNode = (Node)malloc(sizeof(struct node));
+    newNode->data = data;
+    newNode->next = NULL;
+    newNode->prev = NULL;
     return newNode;
 }
 
-void forward(Node pr ){
-    
+void forward(Node pr)
+{
+
     while (pr)
     {
         printf("%d->", pr->data);
-        pr = pr ->next;
+        pr = pr->next;
     }
     printf("NULL\n");
 }
-void backward(Node pr ){
-    
+void backward(Node pr)
+{
+
     while (pr)
     {
         printf("%d->", pr->data);
@@ -35,8 +38,8 @@ void backward(Node pr ){
     printf("NULL\n");
 }
 
-int main() {
-    
+int main()
+{
 
     Node node1 = createNode(1);
     Node node2 = createNode(2);
@@ -46,12 +49,12 @@ int main() {
     node1->next = node2;
     node2->next = node3;
     node3->next = node4;
-    node4 ->next = NULL;
+    node4->next = NULL;
 
-    node4 -> prev = node3;
+    node4->prev = node3;
     node3->prev = node2;
     node2->prev = node1;
-    node1 -> prev = NULL;
+    node1->prev = NULL;
 
     printf("list:");
     forward(node1);
